@@ -48,6 +48,9 @@ angular.module('cfp.loadingBarInterceptor', ['cfp.loadingBar'])
        */
       var startTimeout;
 
+      $rootScope.$on('setComplete', function () {
+        setComplete();
+      });
 
       /**
        * calls cfpLoadingBar.complete() which removes the

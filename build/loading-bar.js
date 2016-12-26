@@ -1,4 +1,4 @@
-/*! 
+/*!
  * angular-loading-bar v0.9.0
  * https://chieffancypants.github.io/angular-loading-bar
  * Copyright (c) 2016 Wes Cruver
@@ -54,6 +54,9 @@ angular.module('cfp.loadingBarInterceptor', ['cfp.loadingBar'])
        */
       var startTimeout;
 
+      $rootScope.$on('setComplete', function () {
+        setComplete();
+      });
 
       /**
        * calls cfpLoadingBar.complete() which removes the
