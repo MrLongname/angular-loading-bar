@@ -54,7 +54,7 @@ angular.module('cfp.loadingBarInterceptor', ['cfp.loadingBar'])
        */
       var startTimeout;
 
-      $rootScope.$on('setComplete', function () {
+      $rootScope.$on('cfpLoadingBar:setComplete', function () {
         setComplete();
       });
 
